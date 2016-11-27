@@ -113,6 +113,28 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* NEWSLETTER PAGE */
+input {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+button {
+  font-size: 24px;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+#info {
+  margin-top: 20px;
+}
+/* END NEWSLETTER PAGE */
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
