@@ -32,8 +32,8 @@ return {
 
 }
 
-SignupController.$inject = ['DataInterceptor'];
-function SignupController(DataInterceptor) {
+SignupController.$inject = ['DataInterceptor', 'UserInfoService'];
+function SignupController(DataInterceptor, UserInfoService) {
   var $ctrl = this;
    $ctrl.message = "";
 
@@ -48,8 +48,13 @@ function SignupController(DataInterceptor) {
        else {
          $ctrl.message = "Your information has been saved";
          $ctrl.completed = true;
-
-         
+         UserInfoService.saveUser($ctrl.user.firstname,
+                                  $ctrl.user.lastname,
+                                  $ctrl.user.email,
+                                  $ctrl.user.phone,
+                                  $ctrl.user.menufav,
+                                  response.name,
+                                  response.description);
        }
     });
   };

@@ -1,4 +1,27 @@
 <div class="container">
 
+<div id="info" ng-if="userCtrl.olduser">
+First name: {{ userCtrl.firstname }}
+<br>
+Lat name: {{ userCtrl.lastname }}
+<br>
+Email: {{ userCtrl.email }}
+<br>
+Phone: {{ userCtrl.phone }}
+<br>
+Favorite menu number: {{ userCtrl.favmenu }}
+<br>
+<img class="img-responsive" width="250" height="150" ng-src="{{userCtrl.basePath}}/images/{{userCtrl.favmenu}}.jpg">
+<br>
+Menu name: {{ userCtrl.title }}
+<br>
+Description: {{ userCtrl.description }}
+
+</div>
+
+<div id="info" ng-if="userCtrl.newuser">{{ userCtrl.message }}
+  <br>
+  <a ui-sref="public.signup">Sign up Now!</a>
+</div>
 
 </div>
